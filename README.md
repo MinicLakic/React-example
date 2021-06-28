@@ -1,2 +1,2 @@
 # React-example
-React exampel
+React example

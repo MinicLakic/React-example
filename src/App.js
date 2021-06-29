@@ -1,3 +1,4 @@
+import NewExpense from './components/NewExpense/NewExpense'; 
 import Expenses from './components/Expenses/Expenses';
 
 // HTML code inside JS code, to je JSX on je moguc zbog svih transformacija koje se odigravaju u pozadini
@@ -28,9 +29,14 @@ const App = () => {
       },
     ]
 
+    const addExpenseHandler = expense =>{
+      console.log('In App.js');
+      console.log(expense);
+    }
+
     return (
       <div>
-        <h2>Let's get started!</h2>
+        <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses} />
       </div>
     );
